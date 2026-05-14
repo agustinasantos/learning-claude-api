@@ -28,6 +28,5 @@ def compare_model_speeds():
         print(f"Generated Tokens: {tokens}")
         print(f"Execution Time: {execution_time:.2f} seconds")
         print(f"Time Per Token: {time_per_token:.2f} seconds\n")
-
 compare_model_speeds()
 
