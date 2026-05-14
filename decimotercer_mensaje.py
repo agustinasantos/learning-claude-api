@@ -1,5 +1,4 @@
-# Decimotercer mensaje: Chatbot con streaming
-# Combina Lesson 2 (historial) + Lesson 5 (streaming)
+# Combine Lesson 2 (history) + Lesson 5 (streaming)
 
 from dotenv import load_dotenv
 from anthropic import Anthropic
