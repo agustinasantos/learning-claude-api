@@ -6,7 +6,7 @@ client = Anthropic()
 
 def translate(word, language):
     response = client.messages.create(
-        model="claude-opus-4-6",
+        model="claude-haiku-4-5",
         max_tokens=1000,
         messages=[
             {"role": "user", "content": f"Translate the word {word} into {language}. Only respond with the translated word, nothing else"}
