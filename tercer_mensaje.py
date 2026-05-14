@@ -1,3 +1,9 @@
+from anthropic import Anthropic
+from dotenv import load_dotenv
+
+load_dotenv()
+client = Anthropic()
+
 def translate(dog, french):
   response = client.messages.create(
       model="claude-3-opus-20240229",
