@@ -1,5 +1,5 @@
 from dotenv import load_dotenv
-load_dotenv()  # Lee tu archivo .env y carga las variables
+load_dotenv()
 
 import anthropic
 
