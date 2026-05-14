@@ -1,4 +1,4 @@
-import anthropic
+from anthropic import Anthropic
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -6,7 +6,7 @@ client = anthropic.Anthropic()
 
 import time
 def compare_model_speeds():
-    models = ["claude-opus-4-7", "claude-sonnet-4-6", "claude-haiku-4-5-20251001"]
+    models = ["claude-opus-4-6", "claude-sonnet-4-6", "claude-haiku-4-5-20251001"]
     task = "Explain the concept of photosynthesis in a concise paragraph."
 
     for model in models:
@@ -28,4 +28,6 @@ def compare_model_speeds():
         print(f"Generated Tokens: {tokens}")
         print(f"Execution Time: {execution_time:.2f} seconds")
         print(f"Time Per Token: {time_per_token:.2f} seconds\n")
+
+compare_model_speeds()
 
