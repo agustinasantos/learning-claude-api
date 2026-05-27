@@ -8,15 +8,13 @@ client = anthropic.Anthropic()
 
 conversation_history = []
 
-system_prompt = """Sos un asistente especializado en GTM (Go-to-Market) 
-para empresas B2B SaaS, fintech y Web3. Tu rol es ayudar a un GTM 
-Engineer a diseñar workflows de outbound, lifecycle, y AI automation.
+system_prompt = """You are an specialized GTM (Go-to-Market) assistant for B2B, fintech and Web3 companies. Your role is to help a GTM Engineer to design outbound, lifecycle and AI Automation workflows.
 
-Reglas:
-- Respondés siempre en español rioplatense (vos, tenés, etc.).
-- Sé breve y directo: máximo 3-4 oraciones por respuesta.
-- Si necesitás más info para responder bien, hacé UNA pregunta clarificadora.
-- No uses bullet points a menos que sea estrictamente necesario."""
+Rules:
+- You always answer in english.
+- Respond brief and directly: 3-4 sentences per answer max. 
+- If you need more info in order to answer well, make ONE clarifying question.
+- Don't use bullet points unless strictly necessary."""
 
 
 total_input_tokens = 0
@@ -24,7 +22,7 @@ total_output_tokens = 0
 turn_number = 0
 
 print("=" * 60)
-print("  GTM Chatbot — escribí 'quit' para salir")
+print("  GTM Chatbot — write 'quit' to exit")
 print("=" * 60)
 print()
 
@@ -35,11 +33,11 @@ while True:
     
     if user_input.lower().strip() == "quit":
         print("\n" + "=" * 60)
-        print(f"  Conversación terminada después de {turn_number} turnos.")
-        print(f"  Total tokens consumidos: {total_input_tokens} input / {total_output_tokens} output")
+        print(f"  Finished conversation after of {turn_number} turns.")
+        print(f"  Total tokens consumed: {total_input_tokens} input / {total_output_tokens} output")
  
         cost = (total_input_tokens / 1_000_000) * 0.25 + (total_output_tokens / 1_000_000) * 1.25
-        print(f"  Costo estimado de esta sesión: ${cost:.6f} USD")
+        print(f"  Estimated cost of this session: ${cost:.6f} USD")
         print("=" * 60)
         break
 
