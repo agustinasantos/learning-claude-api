@@ -14,7 +14,7 @@ def measure_streaming_ttft():
         messages=[
             {
                 "role": "user",
-                "content": "Write mme a long essay explaining the history of the American Revolution",
+                "content": "Write me a long essay explaining the history of the American Revolution",
             }
         ],
         temperature=0,
